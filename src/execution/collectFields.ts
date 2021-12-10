@@ -176,9 +176,10 @@ function shouldIncludeNode(
     node,
     variableValues,
   );
-  if (include?.if === false) {
-    return false;
+  if (include) {
+    return include.if === true
   }
+
   return true;
 }
 
